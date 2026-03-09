@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup rules for Auto Backup (Android 6-11).
+    Google Play requires apps to define backup behavior.
+-->
+<full-backup-content>
+    <include domain="sharedpref" path="diyou_prefs.xml" />
+    <exclude domain="cache" />
+    <exclude domain="external-cache" />
+    <exclude domain="no-backup" />
+</full-backup-content>

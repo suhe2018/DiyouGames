@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root frame: game surface behind, HUD controls on top -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gameContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <!-- GameView (SurfaceView) will be added programmatically at index 0 -->
+
+    <!-- ── P1 Controls (bottom-left) ──────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/p1Controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|start"
+        android:padding="8dp"
+        android:layout_marginBottom="4dp">
+
+        <!-- Action buttons row (above d-pad) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="72dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnSpecial"
+                style="@style/Widget.DiyouGames.CombatButton.Special"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="绝招"
+                android:textSize="11sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnBlock"
+                style="@style/Widget.DiyouGames.CombatButton.Block"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="防御"
+                android:textSize="11sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnAttack"
+                style="@style/Widget.DiyouGames.CombatButton.Attack"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:text="攻击"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- D-pad row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnLeft"
+                style="@style/Widget.DiyouGames.CombatButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="◀"
+                android:textSize="20sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnJump"
+                style="@style/Widget.DiyouGames.CombatButton.Jump"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="跳"
+                android:textSize="14sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p1BtnRight"
+                style="@style/Widget.DiyouGames.CombatButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="▶"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ── P2 Controls (bottom-right, shown for local 2-player) ──────── -->
+    <LinearLayout
+        android:id="@+id/p2Controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end"
+        android:padding="8dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnAttack"
+                style="@style/Widget.DiyouGames.CombatButton.Attack"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:text="攻击"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnBlock"
+                style="@style/Widget.DiyouGames.CombatButton.Block"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="防御"
+                android:textSize="11sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnSpecial"
+                style="@style/Widget.DiyouGames.CombatButton.Special"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="绝招"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnLeft"
+                style="@style/Widget.DiyouGames.CombatButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="◀"
+                android:textSize="20sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnJump"
+                style="@style/Widget.DiyouGames.CombatButton.Jump"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="跳"
+                android:textSize="14sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/p2BtnRight"
+                style="@style/Widget.DiyouGames.CombatButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="▶"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Pause button (top center) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPause"
+        style="@style/Widget.DiyouGames.CombatButton"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:text="⏸"
+        android:textSize="14sp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="4dp" />
+
+</FrameLayout>

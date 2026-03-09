@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- HP -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="14dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+            android:text="HP" android:textSize="9sp" android:textColor="#C8B8E8"
+            android:fontFamily="monospace" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="8dp"
+            android:layout_weight="1" android:background="#1A1040">
+            <View android:id="@+id/statHp"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#32C850" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Speed -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="14dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+            android:text="SPD" android:textSize="9sp" android:textColor="#C8B8E8"
+            android:fontFamily="monospace" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="8dp"
+            android:layout_weight="1" android:background="#1A1040">
+            <View android:id="@+id/statSpd"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#4080FF" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Defense -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="14dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+            android:text="DEF" android:textSize="9sp" android:textColor="#C8B8E8"
+            android:fontFamily="monospace" />
+        <FrameLayout android:layout_width="0dp" android:layout_height="8dp"
+            android:layout_weight="1" android:background="#1A1040">
+            <View android:id="@+id/statDef"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#C87820" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

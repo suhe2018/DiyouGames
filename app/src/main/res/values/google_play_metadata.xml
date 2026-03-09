@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Google Play Store metadata reference.
+    These strings are used for Play Store listing compliance.
+
+    Content Rating: Everyone 10+ (E10+)
+    - Fantasy Violence: Stylized cartoon combat, no blood/gore
+    - No real-money purchases (no IAP)
+    - No ads
+    - No user-generated content
+    - No personal data collection
+    - Fully offline game
+
+    Target API: 35 (Android 15)
+    Min API: 26 (Android 8.0 Oreo)
+
+    Privacy Policy: Required for Play Store listing
+    https://diyougames.example.com/privacy
+
+    Data Safety:
+    - No data collected from users
+    - No data shared with third parties
+    - Data is not encrypted (local prefs only)
+    - Users cannot request data deletion (no data stored)
+-->
+<resources>
+    <string name="play_short_desc" translatable="false">
+        像素风格格斗游戏，多角色多武器，决斗对决！
+    </string>
+    <string name="play_full_desc" translatable="false">
+        像素决斗 (Pixel Duel) 是一款经典像素风格2D格斗游戏。
+
+        【游戏特色】
+        ✦ 4 个独特角色：战士、忍者、武僧、骑士
+        ✦ 6 种武器：长剑、双刃、法杖、铁棍、长矛、战斧
+        ✦ 连击系统 + 绝招技能
+        ✦ 单人 VS AI（4 种难度）
+        ✦ 本地双人对战
+        ✦ 3 回合制决斗
+        ✦ 无需网络，完全离线
+
+        【操作方式】
+        触摸虚拟按键控制移动、跳跃、攻击、防御和绝招。
+
+        【内容分级】
+        本游戏包含卡通风格格斗内容（无血腥、无暴力），
+        适合10岁及以上玩家。
+    </string>
+</resources>

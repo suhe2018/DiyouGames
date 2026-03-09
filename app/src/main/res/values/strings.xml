@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">像素决斗 DiyouGames</string>
+    <string name="app_name_en">Pixel Duel</string>
+
+    <!-- Main Menu -->
+    <string name="menu_vs_ai">单人模式\nVS 电脑</string>
+    <string name="menu_vs_player">双人模式\n本地对战</string>
+    <string name="menu_settings">设置</string>
+
+    <!-- Character Select -->
+    <string name="select_character">选择角色</string>
+    <string name="select_weapon">选择武器</string>
+    <string name="player_1">玩家 1</string>
+    <string name="player_2">玩家 2</string>
+    <string name="btn_fight">开始决斗！</string>
+    <string name="btn_back">返回</string>
+    <string name="difficulty">AI 难度</string>
+    <string name="stat_hp">生命值</string>
+    <string name="stat_speed">速度</string>
+    <string name="stat_defense">防御</string>
+
+    <!-- Game -->
+    <string name="btn_pause">⏸</string>
+    <string name="btn_resume">▶</string>
+    <string name="btn_left">◀</string>
+    <string name="btn_right">▶</string>
+    <string name="btn_jump">跳</string>
+    <string name="btn_attack">攻击</string>
+    <string name="btn_block">防御</string>
+    <string name="btn_special">绝招</string>
+
+    <!-- Result -->
+    <string name="result_win">胜利！</string>
+    <string name="result_lose">失败</string>
+    <string name="result_draw">平局</string>
+    <string name="btn_rematch">再来一局</string>
+    <string name="btn_main_menu">主菜单</string>
+
+    <!-- Settings -->
+    <string name="settings_title">游戏设置</string>
+    <string name="sfx_volume">音效音量</string>
+    <string name="bgm_volume">背景音乐</string>
+    <string name="sfx_enabled">开启音效</string>
+    <string name="bgm_enabled">开启音乐</string>
+    <string name="vibration">震动反馈</string>
+
+    <!-- Google Play content rating info (used in metadata) -->
+    <string name="content_rating_info">本游戏包含卡通暴力内容，适合10岁以上玩家</string>
+    <string name="privacy_policy_url" translatable="false">https://diyougames.example.com/privacy</string>
+</resources>

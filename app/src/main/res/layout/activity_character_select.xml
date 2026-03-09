@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".ui.CharacterSelectActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择角色"
+        android:textSize="22sp"
+        android:textColor="@color/accent_gold"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- VS divider -->
+    <TextView
+        android:id="@+id/tvVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textSize="28sp"
+        android:textColor="@color/secondary"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@id/btnFight"
+        app:layout_constraintStart_toEndOf="@id/p1Card"
+        app:layout_constraintEnd_toStartOf="@id/p2Card" />
+
+    <!-- ── P1 Card ─────────────────────────────────────────────────────── -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/p1Card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/surface"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvVs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- P1 label -->
+            <TextView
+                android:id="@+id/labelP1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="玩家 1"
+                android:textSize="13sp"
+                android:textColor="@color/p1_color"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <!-- Character selector row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p1PrevChar"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="◀"
+                    android:textSize="12sp"
+                    app:iconPadding="0dp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/p1CharSprite"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:scaleType="fitCenter"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p1NextChar"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="▶"
+                    android:textSize="12sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+            </LinearLayout>
+
+            <!-- Character name & desc -->
+            <TextView
+                android:id="@+id/p1CharName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                tools:text="战士  Warrior" />
+
+            <TextView
+                android:id="@+id/p1CharDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                tools:text="厚甲重剑，冲锋在前" />
+
+            <!-- Weapon selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p1PrevWeapon"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:text="◀"
+                    android:textSize="10sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+
+                <TextView
+                    android:id="@+id/p1WeaponName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="monospace"
+                    tools:text="长剑 Sword" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p1NextWeapon"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:text="▶"
+                    android:textSize="10sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+            </LinearLayout>
+
+            <!-- Stats -->
+            <include layout="@layout/widget_stat_bars"
+                android:id="@+id/p1Stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+
+            <!-- Special -->
+            <TextView
+                android:id="@+id/p1SpecialName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/accent_gold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="6dp"
+                tools:text="绝招: 猛力斩" />
+
+            <TextView
+                android:id="@+id/p1SpecialDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text_hint"
+                tools:text="蓄力一击，造成双倍伤害" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ── P2 Card ─────────────────────────────────────────────────────── -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/p2Card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/surface"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toEndOf="@id/tvVs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/labelP2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI 对手"
+                android:textSize="13sp"
+                android:textColor="@color/p2_color"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p2PrevChar"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="◀"
+                    android:textSize="12sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+
+                <ImageView
+                    android:id="@+id/p2CharSprite"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:scaleType="fitCenter" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p2NextChar"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="▶"
+                    android:textSize="12sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/p2CharName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                tools:text="武僧  Monk" />
+
+            <TextView
+                android:id="@+id/p2CharDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                tools:text="禅武合一，棍扫千军" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p2PrevWeapon"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:text="◀"
+                    android:textSize="10sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+
+                <TextView
+                    android:id="@+id/p2WeaponName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondary"
+                    android:fontFamily="monospace"
+                    tools:text="法杖 Staff" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/p2NextWeapon"
+                    style="@style/Widget.DiyouGames.PixelButton"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:text="▶"
+                    android:textSize="10sp"
+                    android:padding="0dp"
+                    app:insetTop="0dp"
+                    app:insetBottom="0dp" />
+            </LinearLayout>
+
+            <include layout="@layout/widget_stat_bars"
+                android:id="@+id/p2Stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:id="@+id/p2SpecialName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/accent_gold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="6dp"
+                tools:text="绝招: 金刚波" />
+
+            <TextView
+                android:id="@+id/p2SpecialDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/text_hint"
+                tools:text="发出冲击波，击退敌人" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Difficulty selector (AI mode only) -->
+    <LinearLayout
+        android:id="@+id/difficultyGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnFight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="难度："
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="monospace"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiffEasy"
+            style="@style/Widget.DiyouGames.PixelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="简单"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiffMedium"
+            style="@style/Widget.DiyouGames.PixelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="普通"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiffHard"
+            style="@style/Widget.DiyouGames.PixelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="困难"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiffExpert"
+            style="@style/Widget.DiyouGames.PixelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="专家"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Bottom buttons -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFight"
+        style="@style/Widget.DiyouGames.PixelButton"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:text="⚔  开始决斗！"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        app:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.DiyouGames.PixelButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="返回"
+        android:textSize="12sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Game control button sizes -->
+    <dimen name="ctrl_btn_size">64dp</dimen>
+    <dimen name="ctrl_btn_gap">6dp</dimen>
+    <dimen name="ctrl_action_btn">72dp</dimen>
+
+    <!-- UI padding -->
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="item_gap">8dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_title">24sp</dimen>
+    <dimen name="text_subtitle">16sp</dimen>
+    <dimen name="text_body">13sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_pixel_label">10sp</dimen>
+
+    <!-- Sprite preview size in character select -->
+    <dimen name="sprite_size">100dp</dimen>
+    <dimen name="char_card_width">160dp</dimen>
+</resources>

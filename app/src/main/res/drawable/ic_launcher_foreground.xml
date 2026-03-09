@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Pixel sword icon for launcher -->
+    <!-- Blade -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M50,20 L58,20 L58,70 L50,70 Z" />
+    <!-- Guard -->
+    <path
+        android:fillColor="#C0C0C0"
+        android:pathData="M38,68 L70,68 L70,76 L38,76 Z" />
+    <!-- Handle -->
+    <path
+        android:fillColor="#8B4513"
+        android:pathData="M50,76 L58,76 L58,90 L50,90 Z" />
+    <!-- Pommel -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M46,88 L62,88 L62,96 L46,96 Z" />
+    <!-- Blade shine -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.6"
+        android:pathData="M52,22 L54,22 L54,68 L52,68 Z" />
+
+</vector>
