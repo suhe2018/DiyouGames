@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.DiyouGames" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DiyouGames" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_variant</item>
         <item name="colorOnPrimary">@color/text_primary</item>
@@ -15,8 +15,6 @@
 
     <!-- Full-screen immersive for game screens -->
     <style name="Theme.DiyouGames.Fullscreen" parent="Theme.DiyouGames">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
@@ -44,8 +42,8 @@
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:padding">4dp</item>
-        <item name="insetTop">0dp</item>
-        <item name="insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
     </style>
 
     <!-- Attack button (red) -->
