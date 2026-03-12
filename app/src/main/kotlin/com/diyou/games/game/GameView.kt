@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.PixelFormat
+import android.os.Handler
+import android.os.Looper
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import com.diyou.games.data.CharacterType
@@ -117,6 +119,7 @@ class GameThread(
     private var roundStartTick = -1
     private var prevRoundResult = RoundResult.ONGOING
     private var prevGameOver = false
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     override fun run() {
         running = true
@@ -131,11 +134,11 @@ class GameThread(
                 // Fire events
                 if (engine.roundResult != RoundResult.ONGOING && engine.roundResult != prevRoundResult) {
                     prevRoundResult = engine.roundResult
-                    post { onEvent(GameEvent.RoundEnd(engine.roundResult)) }
+                    mainHandler.post { onEvent(GameEvent.RoundEnd(engine.roundResult)) }
                 }
                 if (engine.isGameOver && !prevGameOver) {
                     prevGameOver = true
-                    post { onEvent(GameEvent.GameOver(engine.winner)) }
+                    mainHandler.post { onEvent(GameEvent.GameOver(engine.winner)) }
                 }
 
                 render()
