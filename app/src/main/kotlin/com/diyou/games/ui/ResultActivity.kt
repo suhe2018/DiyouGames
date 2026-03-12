@@ -37,14 +37,14 @@ class ResultActivity : AppCompatActivity() {
 
         // Winner headline
         binding.tvResultTitle.text = when (winner) {
-            1    -> "${p1Char.displayName} 胜利！"
-            2    -> "${p2Char.displayName} 胜利！"
-            else -> "平局！"
+            1    -> "${p1Char.displayName} Wins!"
+            2    -> "${p2Char.displayName} Wins!"
+            else -> "Draw!"
         }
         binding.tvResultSubtitle.text = when (winner) {
-            1    -> "P1 获胜"
-            2    -> "P2 / AI 获胜"
-            else -> "势均力敌"
+            1    -> "P1 Victory"
+            2    -> "P2 / AI Victory"
+            else -> "Even Match"
         }
 
         // Round score
@@ -52,14 +52,14 @@ class ResultActivity : AppCompatActivity() {
 
         // Stats
         binding.tvP1Stats.text = buildString {
-            appendLine("${p1Char.displayName}")
-            appendLine("回合胜利: $p1Wins")
-            appendLine("总伤害: ${p1Dmg.toInt()}")
+            appendLine(p1Char.displayName)
+            appendLine("Rounds Won: $p1Wins")
+            appendLine("Total Dmg: ${p1Dmg.toInt()}")
         }
         binding.tvP2Stats.text = buildString {
-            appendLine("${p2Char.displayName}")
-            appendLine("回合胜利: $p2Wins")
-            appendLine("总伤害: ${p2Dmg.toInt()}")
+            appendLine(p2Char.displayName)
+            appendLine("Rounds Won: $p2Wins")
+            appendLine("Total Dmg: ${p2Dmg.toInt()}")
         }
 
         // Animate result in

@@ -530,13 +530,13 @@ class PixelRenderer(private val screenWidth: Int, private val screenHeight: Int)
             tick > 45 -> ((60 - tick) * 17).coerceAtLeast(0)
             else -> 255
         }
-        drawOverlayText(canvas, "第 $roundNum 回合", alpha)
+        drawOverlayText(canvas, "Round $roundNum", alpha)
     }
 
     fun drawPause(canvas: Canvas) {
         paint.color = Color.argb(180, 0, 0, 0)
         canvas.drawRect(0f, 0f, screenWidth.toFloat(), screenHeight.toFloat(), paint)
-        drawOverlayText(canvas, "暂停", 255)
+        drawOverlayText(canvas, "PAUSED", 255)
     }
 
     private fun drawOverlayText(canvas: Canvas, text: String, alpha: Int) {

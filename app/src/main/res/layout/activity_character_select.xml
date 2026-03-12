@@ -13,7 +13,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="选择角色"
+        android:text="Select Fighter"
         android:textSize="22sp"
         android:textColor="@color/accent_gold"
         android:fontFamily="monospace"
@@ -66,7 +66,7 @@
                 android:id="@+id/labelP1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="玩家 1"
+                android:text="Player 1"
                 android:textSize="13sp"
                 android:textColor="@color/p1_color"
                 android:fontFamily="monospace"
@@ -222,7 +222,7 @@
                 android:id="@+id/labelP2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AI 对手"
+                android:text="AI Opponent"
                 android:textSize="13sp"
                 android:textColor="@color/p2_color"
                 android:fontFamily="monospace"
@@ -359,7 +359,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="难度："
+            android:text="Difficulty:"
             android:textSize="13sp"
             android:textColor="@color/text_secondary"
             android:fontFamily="monospace"
@@ -370,7 +370,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="简单"
+            android:text="Easy"
             android:textSize="12sp"
             android:layout_marginEnd="6dp" />
 
@@ -379,7 +379,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="普通"
+            android:text="Normal"
             android:textSize="12sp"
             android:layout_marginEnd="6dp" />
 
@@ -388,7 +388,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="困难"
+            android:text="Hard"
             android:textSize="12sp"
             android:layout_marginEnd="6dp" />
 
@@ -397,7 +397,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:text="专家"
+            android:text="Expert"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -407,7 +407,7 @@
         style="@style/Widget.DiyouGames.PixelButton"
         android:layout_width="200dp"
         android:layout_height="52dp"
-        android:text="⚔  开始决斗！"
+        android:text="⚔  FIGHT!"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp"
@@ -421,7 +421,7 @@
         style="@style/Widget.DiyouGames.PixelButton"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:text="返回"
+        android:text="Back"
         android:textSize="12sp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="12dp"

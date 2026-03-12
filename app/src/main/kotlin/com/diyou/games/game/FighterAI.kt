@@ -6,10 +6,10 @@ import kotlin.random.Random
  * AI difficulty levels.
  */
 enum class AIDifficulty(val displayName: String, val reactionDelay: Int, val aggressiveness: Float) {
-    EASY(   "简单", reactionDelay = 30, aggressiveness = 0.3f),
-    MEDIUM( "普通", reactionDelay = 18, aggressiveness = 0.55f),
-    HARD(   "困难", reactionDelay = 8,  aggressiveness = 0.80f),
-    EXPERT( "专家", reactionDelay = 3,  aggressiveness = 0.95f)
+    EASY(   "Easy",   reactionDelay = 30, aggressiveness = 0.3f),
+    MEDIUM( "Normal", reactionDelay = 18, aggressiveness = 0.55f),
+    HARD(   "Hard",   reactionDelay = 8,  aggressiveness = 0.80f),
+    EXPERT( "Expert", reactionDelay = 3,  aggressiveness = 0.95f)
 }
 
 /**

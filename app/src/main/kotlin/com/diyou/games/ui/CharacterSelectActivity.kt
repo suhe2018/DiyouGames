@@ -52,7 +52,7 @@ class CharacterSelectActivity : AppCompatActivity() {
         updateP2UI()
 
         // Show/hide P2 title based on mode
-        binding.labelP2.text = if (gameMode == GameMode.VS_AI) "AI 对手" else "玩家 2"
+        binding.labelP2.text = if (gameMode == GameMode.VS_AI) "AI Opponent" else "Player 2"
         binding.difficultyGroup.visibility =
             if (gameMode == GameMode.VS_AI) View.VISIBLE else View.GONE
     }
@@ -139,7 +139,7 @@ class CharacterSelectActivity : AppCompatActivity() {
         binding.p1CharDesc.text   = char.description
         binding.p1WeaponName.text = "${weapon.displayName}  ${weapon.displayNameEn}"
         binding.p1CharSprite.setImageBitmap(generateCharSprite(char, weapon))
-        binding.p1SpecialName.text = "绝招: ${char.specialName}"
+        binding.p1SpecialName.text = "Special: ${char.specialName}"
         binding.p1SpecialDesc.text = char.specialDesc
         updateStatBars(
             binding.p1Stats.statHp,
@@ -158,7 +158,7 @@ class CharacterSelectActivity : AppCompatActivity() {
         binding.p2CharDesc.text   = char.description
         binding.p2WeaponName.text = "${weapon.displayName}  ${weapon.displayNameEn}"
         binding.p2CharSprite.setImageBitmap(generateCharSprite(char, weapon, flipped = true))
-        binding.p2SpecialName.text = "绝招: ${char.specialName}"
+        binding.p2SpecialName.text = "Special: ${char.specialName}"
         binding.p2SpecialDesc.text = char.specialDesc
         updateStatBars(
             binding.p2Stats.statHp,

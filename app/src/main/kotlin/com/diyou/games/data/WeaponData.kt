@@ -18,7 +18,7 @@ enum class WeaponType(
     val glowColor: Int
 ) {
     SWORD(
-        displayName = "长剑",
+        displayName = "Sword",
         displayNameEn = "Sword",
         baseDamage = 25,
         attackSpeed = 1.5f,
@@ -29,7 +29,7 @@ enum class WeaponType(
         glowColor = Color.rgb(150, 200, 255)
     ),
     DAGGER(
-        displayName = "双刃",
+        displayName = "Dual Daggers",
         displayNameEn = "Dual Daggers",
         baseDamage = 15,
         attackSpeed = 2.8f,
@@ -40,7 +40,7 @@ enum class WeaponType(
         glowColor = Color.rgb(255, 240, 80)
     ),
     STAFF(
-        displayName = "法杖",
+        displayName = "Magic Staff",
         displayNameEn = "Magic Staff",
         baseDamage = 35,
         attackSpeed = 0.9f,
@@ -51,7 +51,7 @@ enum class WeaponType(
         glowColor = Color.rgb(220, 100, 255)
     ),
     CLUB(
-        displayName = "铁棍",
+        displayName = "Iron Club",
         displayNameEn = "Iron Club",
         baseDamage = 40,
         attackSpeed = 0.7f,
@@ -62,7 +62,7 @@ enum class WeaponType(
         glowColor = Color.rgb(255, 160, 60)
     ),
     SPEAR(
-        displayName = "长矛",
+        displayName = "Spear",
         displayNameEn = "Spear",
         baseDamage = 30,
         attackSpeed = 1.2f,
@@ -73,7 +73,7 @@ enum class WeaponType(
         glowColor = Color.rgb(255, 200, 100)
     ),
     AXE(
-        displayName = "战斧",
+        displayName = "Battle Axe",
         displayNameEn = "Battle Axe",
         baseDamage = 50,
         attackSpeed = 0.6f,

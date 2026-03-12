@@ -214,10 +214,10 @@ class GameActivity : AppCompatActivity() {
         val wasPaused = gameView.isPaused
         if (!wasPaused) gameView.togglePause()
         AlertDialog.Builder(this)
-            .setTitle("退出对战")
-            .setMessage("确定要放弃本场对战并返回吗？")
-            .setPositiveButton("返回主页") { _, _ -> finish() }
-            .setNegativeButton("继续游戏") { _, _ ->
+            .setTitle("Quit Match")
+            .setMessage("Abandon this match and return to the main menu?")
+            .setPositiveButton("Main Menu") { _, _ -> finish() }
+            .setNegativeButton("Keep Playing") { _, _ ->
                 if (!wasPaused) gameView.togglePause()
             }
             .setOnCancelListener {

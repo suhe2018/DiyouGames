@@ -32,7 +32,7 @@
             android:id="@+id/logoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="像素决斗"
+            android:text="PIXEL DUEL"
             android:textSize="48sp"
             android:textColor="@color/accent_gold"
             android:fontFamily="monospace"
@@ -73,7 +73,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="220dp"
             android:layout_height="56dp"
-            android:text="⚔  单人 VS 电脑"
+            android:text="⚔  Single Player"
             android:textSize="16sp"
             android:layout_marginBottom="14dp" />
 
@@ -82,7 +82,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="220dp"
             android:layout_height="56dp"
-            android:text="⚔  本地双人对战"
+            android:text="⚔  Local 2-Player"
             android:textSize="16sp"
             android:layout_marginBottom="14dp" />
 
@@ -91,7 +91,7 @@
             style="@style/Widget.DiyouGames.PixelButton"
             android:layout_width="220dp"
             android:layout_height="48dp"
-            android:text="⚙  设置"
+            android:text="⚙  Settings"
             android:textSize="14sp" />
 
     </LinearLayout>

@@ -25,25 +25,25 @@
 -->
 <resources>
     <string name="play_short_desc" translatable="false">
-        像素风格格斗游戏，多角色多武器，决斗对决！
+        Pixel-art fighting game — multiple characters, weapons, and duels!
     </string>
     <string name="play_full_desc" translatable="false">
-        像素决斗 (Pixel Duel) 是一款经典像素风格2D格斗游戏。
+        Pixel Duel is a classic pixel-art 2D fighting game.
 
-        【游戏特色】
-        ✦ 4 个独特角色：战士、忍者、武僧、骑士
-        ✦ 6 种武器：长剑、双刃、法杖、铁棍、长矛、战斧
-        ✦ 连击系统 + 绝招技能
-        ✦ 单人 VS AI（4 种难度）
-        ✦ 本地双人对战
-        ✦ 3 回合制决斗
-        ✦ 无需网络，完全离线
+        [Features]
+        ✦ 4 unique fighters: Warrior, Ninja, Monk, Knight
+        ✦ 6 weapons: Sword, Dual Daggers, Magic Staff, Iron Club, Spear, Battle Axe
+        ✦ Combo system + Special moves
+        ✦ Single Player VS AI (4 difficulty levels)
+        ✦ Local 2-Player battle
+        ✦ Best-of-3 rounds
+        ✦ No internet required — fully offline
 
-        【操作方式】
-        触摸虚拟按键控制移动、跳跃、攻击、防御和绝招。
+        [Controls]
+        On-screen virtual buttons for move, jump, attack, block, and special.
 
-        【内容分级】
-        本游戏包含卡通风格格斗内容（无血腥、无暴力），
-        适合10岁及以上玩家。
+        [Content Rating]
+        Contains cartoon-style fighting (no blood or gore).
+        Suitable for ages 10 and up.
     </string>
 </resources>

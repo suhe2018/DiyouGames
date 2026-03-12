@@ -34,7 +34,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Special"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="绝招"
+                android:text="Special"
                 android:textSize="11sp"
                 android:layout_marginEnd="4dp" />
 
@@ -43,7 +43,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Block"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="防御"
+                android:text="Block"
                 android:textSize="11sp"
                 android:layout_marginEnd="4dp" />
 
@@ -52,7 +52,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Attack"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:text="攻击"
+                android:text="Attack"
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -78,7 +78,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Jump"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="跳"
+                android:text="Jump"
                 android:textSize="14sp"
                 android:layout_marginEnd="4dp" />
 
@@ -116,7 +116,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Attack"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:text="攻击"
+                android:text="Attack"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:layout_marginEnd="4dp" />
@@ -126,7 +126,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Block"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="防御"
+                android:text="Block"
                 android:textSize="11sp"
                 android:layout_marginEnd="4dp" />
 
@@ -135,7 +135,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Special"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="绝招"
+                android:text="Special"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -159,7 +159,7 @@
                 style="@style/Widget.DiyouGames.CombatButton.Jump"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:text="跳"
+                android:text="Jump"
                 android:textSize="14sp"
                 android:layout_marginEnd="4dp" />
 
