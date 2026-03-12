@@ -168,19 +168,21 @@ class GameActivity : AppCompatActivity() {
 
     private fun setupGameCallbacks() {
         gameView.onGameOver = { winner ->
-            val engine = gameView.getBattleEngine() ?: return@onGameOver
-            runOnUiThread {
-                val intent = Intent(this, ResultActivity::class.java).apply {
-                    putExtra(ResultActivity.EXTRA_WINNER, winner)
-                    putExtra(ResultActivity.EXTRA_P1_WINS, engine.p1RoundWins)
-                    putExtra(ResultActivity.EXTRA_P2_WINS, engine.p2RoundWins)
-                    putExtra(ResultActivity.EXTRA_P1_DMG,  engine.player1.damageDealt)
-                    putExtra(ResultActivity.EXTRA_P2_DMG,  engine.player2.damageDealt)
-                    putExtra(ResultActivity.EXTRA_P1_CHAR, engine.player1.characterType.ordinal)
-                    putExtra(ResultActivity.EXTRA_P2_CHAR, engine.player2.characterType.ordinal)
+            val engine = gameView.getBattleEngine()
+            if (engine != null) {
+                runOnUiThread {
+                    val intent = Intent(this, ResultActivity::class.java).apply {
+                        putExtra(ResultActivity.EXTRA_WINNER, winner)
+                        putExtra(ResultActivity.EXTRA_P1_WINS, engine.p1RoundWins)
+                        putExtra(ResultActivity.EXTRA_P2_WINS, engine.p2RoundWins)
+                        putExtra(ResultActivity.EXTRA_P1_DMG,  engine.player1.damageDealt)
+                        putExtra(ResultActivity.EXTRA_P2_DMG,  engine.player2.damageDealt)
+                        putExtra(ResultActivity.EXTRA_P1_CHAR, engine.player1.characterType.ordinal)
+                        putExtra(ResultActivity.EXTRA_P2_CHAR, engine.player2.characterType.ordinal)
+                    }
+                    startActivity(intent)
+                    finish()
                 }
-                startActivity(intent)
-                finish()
             }
         }
 
