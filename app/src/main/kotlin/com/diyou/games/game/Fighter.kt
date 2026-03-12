@@ -78,7 +78,13 @@ class Fighter(
             }
         }
 
-        // Arena bounds
+        // Ceiling collision — prevent character from jumping off top of screen
+        if (y < GameConfig.ARENA_TOP_BOUND) {
+            y = GameConfig.ARENA_TOP_BOUND
+            if (velY < 0f) velY = 0f
+        }
+
+        // Arena horizontal bounds (account for half-sprite width ~7 vp)
         x = x.coerceIn(GameConfig.ARENA_LEFT_BOUND, GameConfig.ARENA_RIGHT_BOUND)
 
         // Friction

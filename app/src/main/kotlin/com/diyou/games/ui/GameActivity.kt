@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.diyou.games.data.CharacterType
 import com.diyou.games.data.WeaponType
@@ -66,6 +67,7 @@ class GameActivity : AppCompatActivity() {
         setupGameCallbacks()
 
         binding.btnPause.setOnClickListener { gameView.togglePause() }
+        binding.btnBack.setOnClickListener { confirmExit() }
     }
 
     // ─── Touch Controls ───────────────────────────────────────────────────────
@@ -206,6 +208,22 @@ class GameActivity : AppCompatActivity() {
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) enableImmersiveMode()
+    }
+
+    private fun confirmExit() {
+        val wasPaused = gameView.isPaused
+        if (!wasPaused) gameView.togglePause()
+        AlertDialog.Builder(this)
+            .setTitle("退出对战")
+            .setMessage("确定要放弃本场对战并返回吗？")
+            .setPositiveButton("返回主页") { _, _ -> finish() }
+            .setNegativeButton("继续游戏") { _, _ ->
+                if (!wasPaused) gameView.togglePause()
+            }
+            .setOnCancelListener {
+                if (!wasPaused) gameView.togglePause()
+            }
+            .show()
     }
 
     private fun enableImmersiveMode() {

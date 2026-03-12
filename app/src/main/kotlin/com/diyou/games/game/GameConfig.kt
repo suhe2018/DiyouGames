@@ -20,9 +20,10 @@ object GameConfig {
     const val CHAR_WIDTH  = 24
     const val CHAR_HEIGHT = 32
 
-    // Arena
-    const val ARENA_LEFT_BOUND  = 40f
-    const val ARENA_RIGHT_BOUND = 440f
+    // Arena bounds (virtual pixels; x = fighter centre, y = fighter feet)
+    const val ARENA_LEFT_BOUND  = 50f
+    const val ARENA_RIGHT_BOUND = 430f
+    const val ARENA_TOP_BOUND   = 32f   // character is ~30 vp tall, keep head on screen
 
     // Combat
     const val KNOCKBACK_FORCE  = 6f
