@@ -33,7 +33,7 @@ class BattleEngine(
     val aiDifficulty: AIDifficulty = AIDifficulty.MEDIUM,
     screenWidth: Int, screenHeight: Int
 ) {
-    val groundY: Float = screenHeight * GameConfig.GROUND_Y_RATIO
+    val groundY: Float = GameConfig.VIRTUAL_HEIGHT * GameConfig.GROUND_Y_RATIO
 
     val player1 = Fighter(p1Char, p1Weapon, isPlayerOne = true).also { it.y = groundY }
     val player2 = Fighter(p2Char, p2Weapon, isPlayerOne = false).also { it.y = groundY }
