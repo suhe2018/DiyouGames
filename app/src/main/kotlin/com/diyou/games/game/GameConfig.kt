@@ -14,7 +14,7 @@ object GameConfig {
 
     // Physics
     const val GRAVITY = 0.65f
-    const val GROUND_Y_RATIO = 0.75f  // ground at 75% of screen height
+    const val GROUND_Y_RATIO = 0.65f  // ground at 65% — leaves room for on-screen controls
 
     // Character dimensions (virtual pixels)
     const val CHAR_WIDTH  = 24

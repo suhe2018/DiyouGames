@@ -226,7 +226,8 @@ class Fighter(
 
         val kbDir = if (hitbox.x < x) 1f else -1f
         velX = hitbox.knockback * kbDir * (1f - reduction * 0.5f)
-        velY = -3f
+        // No vertical launch — setting velY while onGround=true bypasses gravity
+        // and causes the character to drift off-screen upward indefinitely.
 
         stunFrames = if (isBlocking) GameConfig.STUN_FRAMES / 3 else GameConfig.STUN_FRAMES
         invincibleFrames = GameConfig.INVINCIBLE_FRAMES

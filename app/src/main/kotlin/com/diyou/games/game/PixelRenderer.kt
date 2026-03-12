@@ -75,14 +75,15 @@ class PixelRenderer(private val screenWidth: Int, private val screenHeight: Int)
     }
 
     private fun drawMountains(canvas: Canvas) {
+        // Base y scaled to match GROUND_Y_RATIO = 0.65 → virtual ground ≈ 175
         paint.color = Color.rgb(40, 15, 60)
-        val pts = listOf(0f to 180f, 60f to 130f, 130f to 160f, 200f to 100f,
-                         260f to 140f, 340f to 90f, 400f to 130f, 480f to 120f, 480f to 210f, 0f to 210f)
+        val pts = listOf(0f to 155f, 60f to 105f, 130f to 135f, 200f to 75f,
+                         260f to 115f, 340f to 65f, 400f to 105f, 480f to 95f, 480f to 180f, 0f to 180f)
         drawPixelPolygon(canvas, pts)
 
         paint.color = Color.rgb(55, 25, 75)
-        val pts2 = listOf(0f to 200f, 80f to 165f, 160f to 185f, 240f to 150f,
-                          320f to 170f, 400f to 155f, 480f to 165f, 480f to 210f, 0f to 210f)
+        val pts2 = listOf(0f to 175f, 80f to 140f, 160f to 160f, 240f to 125f,
+                          320f to 145f, 400f to 130f, 480f to 140f, 480f to 180f, 0f to 180f)
         drawPixelPolygon(canvas, pts2)
     }
 

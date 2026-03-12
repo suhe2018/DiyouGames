@@ -174,27 +174,31 @@
 
     </LinearLayout>
 
-    <!-- Back button (top-left) -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBack"
-        style="@style/Widget.DiyouGames.CombatButton"
-        android:layout_width="44dp"
-        android:layout_height="36dp"
-        android:text="◀"
-        android:textSize="14sp"
-        android:layout_gravity="top|start"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp" />
-
-    <!-- Pause button (top center) -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnPause"
-        style="@style/Widget.DiyouGames.CombatButton"
-        android:layout_width="44dp"
-        android:layout_height="36dp"
-        android:text="⏸"
-        android:textSize="14sp"
+    <!-- Top-centre row: pause + back, grouped so neither overlaps HP bars -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="4dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.DiyouGames.CombatButton"
+            android:layout_width="44dp"
+            android:layout_height="36dp"
+            android:text="✕"
+            android:textSize="14sp"
+            android:layout_marginEnd="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPause"
+            style="@style/Widget.DiyouGames.CombatButton"
+            android:layout_width="44dp"
+            android:layout_height="36dp"
+            android:text="⏸"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
 </FrameLayout>
