@@ -89,8 +89,6 @@
                     android:textSize="12sp"
                     app:iconPadding="0dp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
 
                 <ImageView
                     android:id="@+id/p1CharSprite"
@@ -108,8 +106,6 @@
                     android:text="▶"
                     android:textSize="12sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
             </LinearLayout>
 
             <!-- Character name & desc -->
@@ -148,8 +144,6 @@
                     android:text="◀"
                     android:textSize="10sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
 
                 <TextView
                     android:id="@+id/p1WeaponName"
@@ -170,8 +164,6 @@
                     android:text="▶"
                     android:textSize="10sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
             </LinearLayout>
 
             <!-- Stats -->
@@ -251,8 +243,6 @@
                     android:text="◀"
                     android:textSize="12sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
 
                 <ImageView
                     android:id="@+id/p2CharSprite"
@@ -269,8 +259,6 @@
                     android:text="▶"
                     android:textSize="12sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
             </LinearLayout>
 
             <TextView
@@ -307,8 +295,6 @@
                     android:text="◀"
                     android:textSize="10sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
 
                 <TextView
                     android:id="@+id/p2WeaponName"
@@ -329,8 +315,6 @@
                     android:text="▶"
                     android:textSize="10sp"
                     android:padding="0dp"
-                    app:insetTop="0dp"
-                    app:insetBottom="0dp" />
             </LinearLayout>
 
             <include layout="@layout/widget_stat_bars"
